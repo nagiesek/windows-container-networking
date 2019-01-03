@@ -1,15 +1,15 @@
 // Copyright Microsoft Corp.
 // All rights reserved.
 
-package network
+package core
 
 import (
 	"fmt"
 
+	"github.com/Microsoft/windows-container-networking/cni"
+	"github.com/Microsoft/windows-container-networking/common"
+	"github.com/Microsoft/windows-container-networking/network"
 	"github.com/sirupsen/logrus"
-	"visualstudio.com/containernetworking/cni/cni"
-	"visualstudio.com/containernetworking/cni/common"
-	"visualstudio.com/containernetworking/cni/network"
 
 	"github.com/containernetworking/cni/pkg/invoke"
 	cniSkel "github.com/containernetworking/cni/pkg/skel"

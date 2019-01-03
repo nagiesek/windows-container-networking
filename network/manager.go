@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/Microsoft/hcsshim/hcn"
-	"visualstudio.com/containernetworking/cni/common"
+	"github.com/Microsoft/windows-container-networking/common"
 )
 
 // NetworkManager manages the set of container networking resources.
