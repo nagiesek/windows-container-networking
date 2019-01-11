@@ -6,7 +6,7 @@ package network
 import (
 	"encoding/json"
 	"fmt"
-
+	"strings"
 	"github.com/Microsoft/hcsshim/hcn"
 )
 
@@ -26,20 +26,20 @@ type Policy struct {
 // GetPortMappingPolicy creates an HCN PortMappingPolicy and stores it in CNI Policy.
 func GetPortMappingPolicy(externalPort int, internalPort int, protocol string) Policy {
 	var protocolInt uint32
-	switch protocol {
-	case "TCP":
+	switch strings.ToLower(protocol) {
+	case "tcp":
 		protocolInt = 6
 		break
-	case "UDP":
+	case "udp":
 		protocolInt = 17
 		break
-	case "ICMPv4":
+	case "icmpv4":
 		protocolInt = 1
 		break
-	case "ICMPv6":
+	case "icmpv6":
 		protocolInt = 58
 		break
-	case "IGMP":
+	case "igmp":
 		protocolInt = 2
 		break
 	default:

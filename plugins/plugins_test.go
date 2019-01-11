@@ -5,6 +5,7 @@ import (
 	. "github.com/onsi/gomega"
 
 	. "github.com/Microsoft/windows-container-networking/plugins"
+	"github.com/Microsoft/windows-container-networking/test/utilities"
 	cniSkel "github.com/containernetworking/cni/pkg/skel"
 )
 
