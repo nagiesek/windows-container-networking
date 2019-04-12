@@ -35,6 +35,10 @@ steps:
         dep ensure
     fi
     make all
-    make test
   workingDirectory: '$(modulePath)'
   displayName: 'Get dependencies, then build'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'make test'
